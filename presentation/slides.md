@@ -179,6 +179,25 @@ Common sections:
 
 ---
 
+# Prompting Best Practices
+
+- Point the agent to the relevant files, code, or error output.
+- Ask for verification steps such as tests, linting, or manual checks.
+- Start with small tasks, then build toward larger changes.
+- Paste the full stack trace (e.g., all error messages) when debugging.
+- Use `AGENTS.md` for persistent defaults and open-ended prompts for brainstorming.
+
+---
+
+# Starter Task Examples
+
+- `Explain a codebase: summarize structure, key logic, and brittle areas.`
+- `Fix a bug from a full stack trace: <paste error output>`
+- `Expand test coverage for a feature/class/directory @<path>.`
+- `Refactor repeated patterns across multiple files.`
+
+---
+
 # Participant Guides
 
 - `docs/setup/` - machine and account preparation
