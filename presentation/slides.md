@@ -142,6 +142,43 @@ The public repo describes the work clearly without exposing full instructor impl
 
 ---
 
+# Why do we need `AGENTS.md`?
+
+- Coding agents do not retain project context between sessions.
+- For agents that support it, `AGENTS.md` helps ensure your project's instructions are loaded automatically.
+- Use it as a lightweight README so agents can quickly understand your project.
+
+---
+
+# Where should `AGENTS.md` go?
+
+- Global: `~/.codex/AGENTS.md` for personal defaults and safety constraints.
+- Project: put `AGENTS.md` at the repository root for repo-wide context, structure, and conventions.
+- Directory: add another `AGENTS.md` in a subfolder when one part of the project needs more specific instructions.
+- Agents typically load instructions from the current directory upward toward the Git root.
+
+---
+
+# What's included in an `AGENTS.md`?
+
+Common sections:
+
+- Project overview and structure
+- Build and test commands
+- Helpful CLI tools and MCP servers
+- Workflow for implementing a feature
+- Pointers to other task-specific guidance for the agent
+
+---
+
+# Where do I get an `AGENTS.md` template?
+
+- See [OpenAI cookbook for examples](https://github.com/openai/openai-cookbook)
+- Good option - take the `CLAUDE.md` from [this repository](https://github.com/forrestchang/andrej-karpathy-skills/tree/main) and adapt it to your project's `AGENTS.md`
+- Best practices are still emerging, so adapt templates to your needs and share improvements with the community
+
+---
+
 # Participant Guides
 
 - `docs/setup/` - machine and account preparation
@@ -163,3 +200,9 @@ Use the repo as a map, not just a file dump.
 # Closing Principle
 
 Write the project so another researcher can understand it, rerun it, and improve it later.
+
+---
+
+# References
+
+- [OpenAI - Getting started with Codex](https://youtu.be/px7XlbYgk7I?si=HQJc3yuno-S9GhvZ)

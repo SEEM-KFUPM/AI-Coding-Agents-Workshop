@@ -2,8 +2,10 @@
 
 ## Minimum Setup
 
-- Install Git
+- Install [Git](https://git-scm.com/downloads)
 - Configure your name and email
+
+In Git Bash or terminal, run:
 
 ```bash
 git config --global user.name "Your Name"
