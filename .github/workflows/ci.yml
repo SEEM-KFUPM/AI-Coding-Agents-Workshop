@@ -1,0 +1,49 @@
+name: Validate Workshop Structure
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required public files
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            "README.md"
+            "CONTRIBUTING.md"
+            "presentation/slides.md"
+            "presentation/README.md"
+            "docs/setup/local-setup.md"
+            "docs/workshop/agenda.md"
+            "docs/reproducibility/git-workflow.md"
+            "demos/01-legacy-figure-reproduction/README.md"
+            "demos/02-paper-results-reproduction/README.md"
+            "demos/03-geoscience-webapp/README.md"
+          )
+          for path in "${required[@]}"; do
+            test -f "$path"
+          done
+
+      - name: Check demo file contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          demos=(
+            "demos/01-legacy-figure-reproduction"
+            "demos/02-paper-results-reproduction"
+            "demos/03-geoscience-webapp"
+          )
+          for demo in "${demos[@]}"; do
+            test -f "$demo/README.md"
+            test -f "$demo/TASK.md"
+            test -f "$demo/DATA.md"
+            test -f "$demo/OUTPUTS.md"
+            test -f "$demo/MILESTONES.md"
+            test -f "$demo/prompts.md"
+          done

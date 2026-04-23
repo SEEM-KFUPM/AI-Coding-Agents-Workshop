@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Workshop outputs
+presentation/dist/
+presentation/*.pdf
+presentation/*.pptx
+
+# Demo artifacts
+results/
+*.zip
