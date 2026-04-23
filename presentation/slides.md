@@ -198,6 +198,16 @@ Common sections:
 
 ---
 
+# Write Documentation with Codex
+
+Prompt:
+
+```text
+Create a simple HTML page called assets.html that shows how files in this project are related to each other. I want a nice looking page that explains those concepts.
+```
+
+---
+
 # Participant Guides
 
 - `docs/setup/` - machine and account preparation
