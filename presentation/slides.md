@@ -281,9 +281,61 @@ git status
 
 ---
 
+# Visual Studio Code (VS Code)
+
+## Remarks on the IDE (Integrated Development Environment) we will use in the workshop
+
+---
+
+# Why VS Code?
+
+- Free, open-source, and widely used across industries
+- Built-in Git integration for version control
+- Extensions for coding agents like Codex, GitHub Copilot, or  Claude Code, making it easy to get AI assistance directly in your editor
+- Customizable interface and support for many programming languages
+- Standard choice for many developers, making it easier to share tips and troubleshoot together
+
+---
+
+# Install & Explore VS Code
+
+- Download and install VS Code from [the official website](https://code.visualstudio.com/download)
+- Open VS Code and explore the interface: file explorer, terminal, extensions, and settings
+- Explore Extensions panel on the left sidebar
+- Open your cloned repository folder in VS Code
+- Explore the Source Control panel to see the commit history and changes
+
+---
+
 # Codex
 
 ## A coding agent by OpenAI that can help you write, review, and understand code
+
+---
+
+# Why Codex?
+
+- Codex is powered by the same technology as ChatGPT, but fine-tuned for coding tasks
+- Codex has many capabilities apart from code generation that are useful for research
+- KFUPM students, researchers and faculty have free access to Codex by OpenAI using KFUPM credentials
+- We will use Codex in the workshop as an **IDE extension for VS Code**
+
+---
+
+# Alternative use cases
+
+- For VS Code: GitHub Copilot, Claude Code, Kilo Code, etc.
+- [Antigravity](https://antigravity.google/) as an alternative to VS Code (same platform), uses Gemini for coding assistance
+- Separate apps: Cursor, Claude Code, Codex App
+- Outside of the scope of this workshop, but worth exploring for your projects and research
+
+---
+
+# Try Codex in VS Code
+
+- Install the [Codex Extension for VS Code by OpenAI](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt)
+- Open VS Code and sign in with your KFUPM credentials to access Codex
+- Try a simple prompt, e.g. `Create a template README.md for a research project` and see how Codex generates the file
 
 ---
 
