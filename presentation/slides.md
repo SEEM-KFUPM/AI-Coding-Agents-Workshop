@@ -127,7 +127,7 @@ Each public demo folder contains:
 - `MILESTONES.md`
 - `prompts.md`
 
-The public repo describes the work clearly without exposing full instructor implementations.
+`.md` files are [Markdown](https://www.markdownguide.org/) documents, text files with simple formatting that can be rendered nicely on GitHub and in VS Code.
 
 ---
 
@@ -138,6 +138,12 @@ The public repo describes the work clearly without exposing full instructor impl
 ---
 
 # What is Git?
+
+- [Git](https://git-scm.com/) is a distributed version control system: it tracks snapshots of your project over time
+- It helps answer three key questions: what changed, who changed it, and why
+- Commits act like named checkpoints you can inspect, compare, and restore
+- Git works locally, so you do not need GitHub or even internet access to start using it
+- For coding, research, and reports, Git turns trial-and-error into traceable and reproducible work
 
 ---
 
@@ -170,15 +176,114 @@ The public repo describes the work clearly without exposing full instructor impl
 
 # Git Basics
 
+<div class="columns">
+<div class="card">
 
----
+### Core ideas
 
-# Cloning a Repository
+- repository = project + history
+- working tree = your current files
+- staging area = what will go into the next commit
+- commit = a saved checkpoint with a message
+- branch = a separate line of work
 
+</div>
+<div class="card">
+
+### Everyday workflow
+
+```bash
+git status
+git add <file>
+git commit -m "Describe the change"
+git log --oneline
+```
+
+Small, frequent commits make your work easier to review, debug, and reproduce.
+
+</div>
+</div>
 
 ---
 
 # Connection with GitHub
+
+<div class="columns">
+<div class="card">
+
+### Git vs GitHub
+
+- Git = the version control tool on your machine
+- GitHub = a web platform for hosting and sharing Git repositories
+- You can use Git without GitHub, but GitHub makes collaboration much easier
+
+</div>
+<div class="card">
+
+### Typical connection
+
+```bash
+git remote add origin <repo-url>
+git push -u origin main
+```
+
+- publish your local history
+- back it up online
+- open the door to pull requests, issues, and collaboration
+
+</div>
+</div>
+
+---
+
+# Cloning a Repository from GitHub
+
+- `git clone <url>` creates a full local copy of a remote repository
+- You get the project files together with the commit history, branches, and tags
+- This is the standard way to start from an existing project or workshop repository
+- Cloning is better than downloading a ZIP because you can pull updates and contribute changes back
+
+```bash
+git clone https://github.com/SEEM-KFUPM/AI-Coding-Agents-Workshop.git
+cd AI-Coding-Agents-Workshop
+git status
+```
+
+---
+
+# Creating a Repository on GitHub
+
+1. Click `New repository` on GitHub
+2. Choose a clear name and short description
+3. Decide whether it should be `Public` or `Private`
+4. Add a `README`, `.gitignore`, and license when appropriate
+5. Create the repo, then clone it or connect your existing local project
+
+- A GitHub repository becomes the shared home for code, documentation, tasks, and results
+- Creating the repository early makes it easier to organize work, onboard collaborators, and keep agents aligned with the same source of truth
+
+---
+
+# Git & GitHub: Summary
+
+- Git is a powerful tool for tracking changes, collaborating, and ensuring reproducibility in coding projects
+- Using Git from the start of your project helps you maintain a clear history of your work
+- GitHub provides a platform to share your repository, collaborate with others, and manage your project online
+
+---
+
+# Git & GitHub: Next Steps
+
+- In the workshop, we will use Git and GitHub to document our progress, review changes, and share our work
+- Clone [the workshop repository](https://github.com/SEEM-KFUPM/AI-Coding-Agents-Workshop) if you haven't already
+- Create your own repository for your version of demo projects and clone it
+- You will use your repository to track your work on the demos, and you can share it with others for feedback and collaboration
+
+---
+
+# Codex
+
+## A coding agent by OpenAI that can help you write, review, and understand code
 
 ---
 
