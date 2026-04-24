@@ -18,6 +18,7 @@ style: |
     padding: 48px 64px;
     font-size: 25px;
     position: relative;
+    place-content: start center;
   }
   section::before {
     content: "";
@@ -28,6 +29,11 @@ style: |
     height: 40px;
     background: url("./assets/logos/logo.svg") no-repeat left bottom / contain;
     pointer-events: none;
+  }
+  section.lead,
+  section.topic {
+    place-content: safe center center;
+    text-align: center;
   }
   h1, h2 { color: var(--accent); }
   h3 { color: var(--accent-soft); }
@@ -87,6 +93,8 @@ style: |
 
 ---
 
+<!-- _class: topic -->
+
 # About this repository
 
 ## Overview of materials for the workshop
@@ -141,6 +149,8 @@ Each public demo folder contains:
 `.md` files are [Markdown](https://www.markdownguide.org/) documents, text files with simple formatting that can be rendered nicely on GitHub and in VS Code.
 
 ---
+
+<!-- _class: topic -->
 
 # Git & GitHub
 
@@ -292,6 +302,8 @@ git status
 
 ---
 
+<!-- _class: topic -->
+
 # Visual Studio Code (VS Code)
 
 ## Remarks on the IDE (Integrated Development Environment) we will use in the workshop
@@ -317,6 +329,8 @@ git status
 - Explore the Source Control panel to see the commit history and changes
 
 ---
+
+<!-- _class: topic -->
 
 # Codex
 
@@ -349,6 +363,8 @@ git status
 - Try a simple prompt, e.g. `Create a template README.md for a research project` and see how Codex generates the file
 
 ---
+
+<!-- _class: topic -->
 
 # AGENTS.md
 
