@@ -52,26 +52,33 @@ style: |
 
 ## From idea to reproducible mini-projects
 
-Public workshop materials repository
+### Dr. Denis Anikiev (CIPR, KFUPM)
 
 ---
 
 # Why This Workshop?
 
+- Learn how to collaborate with coding agents without over-trusting them
 - Move from ad hoc scripts toward reproducible project structure
 - Treat Git as part of scientific quality control
-- Learn how to collaborate with coding agents without over-trusting them
-- Build habits that transfer to real research projects
+- Build habits that transfer to real research projects and products
 
 ---
 
 # Core Workflow
 
 1. Define the task and expected outputs
-2. Break the project into small verifiable milestones
-3. Use the agent for scoped implementation and review
-4. Track progress with Git from the first step
-5. Validate results, assumptions, and reproducibility
+2. Plan the project structure
+3. Break the project into small verifiable milestones
+4. Use the agent for scoped implementation and review
+5. Track progress with Git from the first step
+6. Validate results, assumptions, and reproducibility
+
+---
+
+# About this repository
+
+## Overview of materials for the workshop
 
 ---
 
@@ -80,13 +87,22 @@ Public workshop materials repository
 ```text
 presentation/
 docs/
-shared/demo-spec-template/
 demos/
+shared/demo-spec-template/
 ```
 
-- `presentation/` contains the Marp deck
+- `presentation/` contains this slide deck
 - `docs/` contains setup, workshop, and reproducibility guidance
 - `demos/` contains the three public demo briefs
+- `shared/demo-spec-template/` contains a template for creating new demo specifications
+
+---
+
+# Guidelines in `docs/`
+
+- `docs/setup/` - machine and account preparation
+- `docs/workshop/` - agenda, prompt hints, troubleshooting
+- `docs/reproducibility/` - Git, environments, project layout
 
 ---
 
@@ -105,12 +121,12 @@ Each demo starts from a clear brief, expected outputs, milestones, and reproduci
 <div class="columns">
 <div class="card">
 
-### Participants practice
+### You practice
 
 - initializing repositories
 - making small commits
-- working in branches
 - inspecting history
+- working in branches if needed
 
 </div>
 <div class="card">
@@ -127,7 +143,7 @@ Each demo starts from a clear brief, expected outputs, milestones, and reproduci
 
 ---
 
-# Demo Brief Contract
+# Demo Structure
 
 Each public demo folder contains:
 
@@ -139,6 +155,20 @@ Each public demo folder contains:
 - `prompts.md`
 
 The public repo describes the work clearly without exposing full instructor implementations.
+
+---
+
+# AGENTS.md
+
+## Best practices for guiding coding agents in your project
+
+---
+
+# What is `AGENTS.md`
+
+- `AGENTS.md` is a simple open format for guiding coding agents in a project.
+- Think of it as a README for agents, with instructions on project structure, conventions, and helpful commands.
+- Used by huge amount of open source projects
 
 ---
 
@@ -165,17 +195,19 @@ Common sections:
 
 - Project overview and structure
 - Build and test commands
-- Helpful CLI tools and MCP servers
 - Workflow for implementing a feature
 - Pointers to other task-specific guidance for the agent
+- Safety constraints and guardrails
+- Environment setup instructions
 
 ---
 
 # Where do I get an `AGENTS.md` template?
 
+- Create your own using `/init` command directly in the prompt
 - See [OpenAI cookbook for examples](https://github.com/openai/openai-cookbook)
 - Good option - take the `CLAUDE.md` from [this repository](https://github.com/forrestchang/andrej-karpathy-skills/tree/main) and adapt it to your project's `AGENTS.md`
-- Best practices are still emerging, so adapt templates to your needs and share improvements with the community
+- Best practices are constantly emerging
 
 ---
 
@@ -189,12 +221,19 @@ Common sections:
 
 ---
 
-# Starter Task Examples
+# Prompt Examples for Starting a New Project
 
-- `Explain a codebase: summarize structure, key logic, and brittle areas.`
+- 
+
+
+---
+
+# Prompt Examples for Existing Project
+
+- `Explain a codebase: summarize structure, key logic, and brittle areas`
 - `Fix a bug from a full stack trace: <paste error output>`
-- `Expand test coverage for a feature/class/directory @<path>.`
-- `Refactor repeated patterns across multiple files.`
+- `Expand test coverage for a feature/class/directory @<path>`
+- `Refactor repeated patterns across multiple files`
 
 ---
 
@@ -203,35 +242,35 @@ Common sections:
 Prompt:
 
 ```text
-Create a simple HTML page called assets.html that shows how files in this project are related to each other. I want a nice looking page that explains those concepts.
+Create a simple HTML page called assets.html that shows how files in this project are related to each other. 
+I want a nice looking page that explains those concepts.
 ```
 
 ---
 
-# Participant Guides
+# Useful Tips
 
-- `docs/setup/` - machine and account preparation
-- `docs/workshop/` - agenda, prompt hints, troubleshooting
-- `docs/reproducibility/` - Git, environments, project layout
-
-Use the repo as a map, not just a file dump.
+- Use `/` to bring up the command menu and explore available commands for your agent
+- You can point the agent to a file with `@<filename>` or folder `@<foldername>` in your prompt
+- Create comments with `# TODO` in your code to explain the purpose of a function or block you want to do, and ask the agent to write the implementation with "Implement with Codex" menu option
+- Use screenshots as a context inside the prompts
 
 ---
 
-# Extension Path
+# Review your Code with Codex
 
-- Start with the guided common project
-- Extend into paper reproduction or application building
-- Reuse the same structure for your own research ideas
+- Use `/review` command in the prompt to ask for a code review
+- You can review against the base branch or uncommitted changes
 
 ---
 
 # Closing Principle
 
-Write the project so another researcher can understand it, rerun it, and improve it later.
+Build your project in a way that another researcher can understand it, rerun it, and improve it later.
 
 ---
 
 # References
 
 - [OpenAI - Getting started with Codex](https://youtu.be/px7XlbYgk7I?si=HQJc3yuno-S9GhvZ)
+- [Finally! A Standard for AI Coding Agents (Agents.md Explained)](https://youtu.be/XDP94mYMCzA?si=f5a0E9nRkAqtBzFi)
