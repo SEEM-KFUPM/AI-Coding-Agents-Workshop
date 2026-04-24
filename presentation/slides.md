@@ -223,8 +223,10 @@ Common sections:
 
 # Prompt Examples for Starting a New Project
 
-- 
-
+- `Turn this idea into a small reproducible project: <describe the goal>. Propose a minimal folder structure and expected outputs.`
+- `Break this project into 4 small milestones with clear deliverables, checks, and likely risks.`
+- `Create the initial scaffold: README, AGENTS.md, src/, tests/, and the smallest runnable entry point. Keep it simple.`
+- `Implement only milestone 1, explain assumptions, and tell me exactly how to verify it before we continue.`
 
 ---
 
