@@ -116,6 +116,31 @@ Each demo starts from a clear brief, expected outputs, milestones, and reproduci
 
 ---
 
+# Demo Structure
+
+Each public demo folder contains:
+
+- `README.md`
+- `TASK.md`
+- `DATA.md`
+- `OUTPUTS.md`
+- `MILESTONES.md`
+- `prompts.md`
+
+The public repo describes the work clearly without exposing full instructor implementations.
+
+---
+
+# Git & GitHub
+
+## Using version control to track progress, ensure reproducibility and share your work
+
+---
+
+# What is Git?
+
+---
+
 # Git as a Teaching Tool
 
 <div class="columns">
@@ -143,18 +168,17 @@ Each demo starts from a clear brief, expected outputs, milestones, and reproduci
 
 ---
 
-# Demo Structure
+# Git Basics
 
-Each public demo folder contains:
 
-- `README.md`
-- `TASK.md`
-- `DATA.md`
-- `OUTPUTS.md`
-- `MILESTONES.md`
-- `prompts.md`
+---
 
-The public repo describes the work clearly without exposing full instructor implementations.
+# Cloning a Repository
+
+
+---
+
+# Connection with GitHub
 
 ---
 
