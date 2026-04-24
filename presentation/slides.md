@@ -17,6 +17,17 @@ style: |
     font-family: 'Segoe UI', system-ui, sans-serif;
     padding: 48px 64px;
     font-size: 25px;
+    position: relative;
+  }
+  section::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    width: 120px;
+    height: 40px;
+    background: url("./assets/logos/logo.svg") no-repeat left bottom / contain;
+    pointer-events: none;
   }
   h1, h2 { color: var(--accent); }
   h3 { color: var(--accent-soft); }
