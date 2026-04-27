@@ -71,9 +71,37 @@ style: |
 
 ### Dr. Denis Anikiev (CIPR, KFUPM)
 
+
+
+---
+
+# Agenda
+
+- **Introduction**: why, what, and how
+- **Git & GitHub**: version control, reproducibility and collaboration
+- **VS Code**: the IDE we will use in the workshop
+- **Codex**: the coding agent we will use in the workshop
+- **Demo projects**: use cases
+
+---
+
+<!-- _class: topic -->
+
+# Introduction
+
+## Why, what, and how
+
 ---
 
 # Why This Workshop?
+
+- Coding agents are powerful tools that can accelerate research and development, but they require careful guidance
+- Share best practices for working with coding agents in a way that promotes reproducibility and scientific rigor
+- Build transferable skills for structuring projects, making them reproducible, and develop a good habit of verifying and documenting your work
+
+---
+
+# What You Will Learn
 
 - Learn how to collaborate with coding agents without over-trusting them
 - Move from ad hoc scripts toward reproducible project structure
@@ -82,7 +110,9 @@ style: |
 
 ---
 
-# Core Workflow
+# How To Approach Projects with Coding Agents
+
+## The Core Workflow
 
 1. Define the task and expected outputs
 2. Plan the project structure
@@ -90,6 +120,32 @@ style: |
 4. Use the agent for scoped implementation and review
 5. Track progress with Git from the first step
 6. Validate results, assumptions, and reproducibility
+
+---
+
+# Requirements for the Workshop
+
+<div class="columns">
+<div class="card">
+
+## Absolutely essential
+
+- A computer with internet access
+- A GitHub account
+- A KFUPM email address for Codex access
+- Git installed
+- VS Code installed
+
+</div>
+<div class="card">
+
+## Recommended
+
+
+
+</div>
+</div>
+
 
 ---
 
