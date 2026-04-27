@@ -95,63 +95,6 @@ style: |
 
 <!-- _class: topic -->
 
-# About this repository
-
-## Overview of materials for the workshop
-
----
-
-# Repository Layout
-
-```text
-presentation/
-docs/
-demos/
-shared/demo-spec-template/
-```
-
-- `presentation/` contains this slide deck
-- `docs/` contains setup, workshop, and reproducibility guidance
-- `demos/` contains the three public demo briefs
-- `shared/demo-spec-template/` contains a template for creating new demo specifications
-
----
-
-# Guidelines in `docs/`
-
-- `docs/setup/` - machine and account preparation
-- `docs/workshop/` - agenda, prompt hints, troubleshooting
-- `docs/reproducibility/` - Git, environments, project layout
-
----
-
-# Demo Tracks
-
-## 1. Legacy figure reproduction
-## 2. Published paper results reproduction
-## 3. Geoscience web app with Gradio
-
-Each demo starts from a clear brief, expected outputs, milestones, and reproducibility notes.
-
----
-
-# Demo Structure
-
-Each public demo folder contains:
-
-- `README.md`
-- `TASK.md`
-- `DATA.md`
-- `OUTPUTS.md`
-- `MILESTONES.md`
-- `prompts.md`
-
-`.md` files are [Markdown](https://www.markdownguide.org/) documents, text files with simple formatting that can be rendered nicely on GitHub and in VS Code.
-
----
-
-<!-- _class: topic -->
-
 # Git & GitHub
 
 ## Using version control to track progress, ensure reproducibility and share your work
@@ -296,9 +239,71 @@ git status
 # Git & GitHub: Next Steps
 
 - In the workshop, we will use Git and GitHub to document our progress, review changes, and share our work
-- Clone [the workshop repository](https://github.com/SEEM-KFUPM/AI-Coding-Agents-Workshop) if you haven't already
+- Clone [the workshop repository](https://github.com/SEEM-KFUPM/AI-Coding-Agents-Workshop) if you haven't already:
+```bash
+git clone https://github.com/SEEM-KFUPM/AI-Coding-Agents-Workshop.git
+cd AI-Coding-Agents-Workshop
+```
 - Create your own repository for your version of demo projects and clone it
 - You will use your repository to track your work on the demos, and you can share it with others for feedback and collaboration
+
+---
+
+<!-- _class: topic -->
+
+# About this repository
+
+## Overview of materials for the workshop
+
+---
+
+# Repository Layout
+
+```text
+presentation/
+docs/
+demos/
+shared/project-template/
+```
+
+- `presentation/` contains this slide deck
+- `docs/` contains setup, workshop, and reproducibility guidance
+- `demos/` contains the three public demo briefs
+- `shared/project-template/` contains a template for creating new project specifications
+
+---
+
+# Guidelines in `docs/`
+
+- `docs/setup/` - machine and account preparation
+- `docs/workshop/` - agenda, prompt hints, troubleshooting
+- `docs/reproducibility/` - Git, environments, project layout
+
+---
+
+# Demo Tracks
+
+## 1. Legacy figure reproduction
+## 2. Published paper results reproduction
+## 3. Geoscience web app
+
+Each demo starts from a clear brief, expected outputs, milestones, and reproducibility notes.
+
+---
+
+# Demo Structure
+
+Each public demo folder contains:
+
+- `input/`
+  - `DATA.md` describes the project inputs
+  - `TASK.md` describes the project task
+  - `OUTPUTS.md` describes the expected outputs and evaluation criteria
+  - `MILESTONES.md` describes the project milestones
+- `prompts.md` contains example prompts for working with the coding agent on this project
+- `README.md` describes the demo, its purpose, and what participants will practice
+
+*Note:* `.md` files are [Markdown](https://www.markdownguide.org/) documents, text files with simple formatting that can be rendered nicely on GitHub and in VS Code.
 
 ---
 

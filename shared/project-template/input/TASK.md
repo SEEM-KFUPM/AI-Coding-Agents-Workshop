@@ -2,7 +2,7 @@
 
 ## Goal
 
-State the participant goal clearly.
+State the goal clearly.
 
 ## Success Criteria
 
