@@ -80,8 +80,14 @@ style: |
 - **Introduction**: why, what, and how
 - **Git & GitHub**: version control, reproducibility and collaboration
 - **VS Code**: the IDE we will use in the workshop
+--- *Short Break* ---
 - **Codex**: the coding agent we will use in the workshop
 - **Demo projects**: use cases
+--- *Long Break* ---
+- **Hands on session**:
+  - take a demo project or design your own project
+  - develop it under guidance of the instructor and assistants
+  - share and review with others (optionally)
 
 ---
 
@@ -123,7 +129,7 @@ style: |
 
 ---
 
-# Requirements for the Workshop
+# Workshop Requirements 
 
 <div class="columns">
 <div class="card">
@@ -135,6 +141,7 @@ style: |
 - A KFUPM email address for Codex access
 - Git installed
 - VS Code installed
+- Codex extension installed in VS Code
 
 </div>
 <div class="card">
