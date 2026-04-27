@@ -71,8 +71,6 @@ style: |
 
 ### Dr. Denis Anikiev (CIPR, KFUPM)
 
-
-
 ---
 
 # Agenda
@@ -82,6 +80,7 @@ style: |
 - **VS Code**: the IDE we will use in the workshop
 --- *Short Break* ---
 - **Codex**: the coding agent we will use in the workshop
+- **Python environment**: setting up a reproducible environment for your project
 - **Demo projects**: use cases
 --- *Long Break* ---
 - **Hands on session**:
@@ -116,7 +115,7 @@ style: |
 
 ---
 
-# How To Approach Projects with Coding Agents
+# How To Approach Projects with AI Coding Agents
 
 ## The Core Workflow
 
@@ -134,11 +133,12 @@ style: |
 <div class="columns">
 <div class="card">
 
-## Absolutely essential
+## Essential
 
 - A computer with internet access
 - A GitHub account
-- A KFUPM email address for Codex access
+- A KFUPM ChatGPT account (for Codex)
+- Python installed
 - Git installed
 - VS Code installed
 - Codex extension installed in VS Code
@@ -148,11 +148,14 @@ style: |
 
 ## Recommended
 
-
+- Basic programming experience
+- Familiarity with running scripts or working in an IDE
+- Basic understanding of data handling
+- Basic knowledge of version control (Git)
+- Prior exposure to working with notebooks or small coding projects
 
 </div>
 </div>
-
 
 ---
 
