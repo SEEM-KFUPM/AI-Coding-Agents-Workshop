@@ -608,9 +608,9 @@ I want a nice looking page that explains those concepts.
 
 <!-- _class: topic -->
 
-# Research reproducibility
+# Reproducibility, Validation & Documentation
 
-## Best practices for making your research projects reproducible and reusable
+## Best practices for making research projects reproducible, reliable and reusable
 
 ---
 
@@ -622,6 +622,7 @@ I want a nice looking page that explains those concepts.
 - Document your changes
 - Use version control (Git) to track changes and enable rollback
 - Set up a reproducible environment
+- Add tests and validation checks to verify your results
 
 ## A Good Question to Ask
 
@@ -660,17 +661,17 @@ Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E. (2013). Ten simple rules 
 
 <!-- _class: topic -->
 
-# Python Environments
+# Coding Environments
 
 ## Setting up a reproducible environment for your project
 
 ---
 
-# What is a Python Environment?
+# What is a Coding Environment?
 
-- A Python environment is a self-contained directory that contains a specific version of Python and a set of installed packages
+- A coding environment is a self-contained directory that contains a specific version of a programming language and a set of installed packages
 - It allows you to manage dependencies and avoid conflicts between different projects.
-- Common tools for managing Python environments include `conda`, `venv`, and `pip`:
+- Common tools for managing Python coding environments include `conda`, `venv`, and `pip`:
   - `conda` is a popular package and environment management system that works across platforms
   - `venv` is a built-in module for creating lightweight virtual environments
   - `pip` is the standard package installer for Python, often used in conjunction with `venv`
@@ -712,7 +713,7 @@ conda env create -f environment.yml
 
 ---
 
-# Advantages of Using Python Environments
+# Advantages of Using Coding Environments
 
 - **Reproducibility**: ensures that you and others can recreate the same environment with the same dependencies (including specific versions)
 - **Isolation**: prevents conflicts between different projects that may require different versions of packages
