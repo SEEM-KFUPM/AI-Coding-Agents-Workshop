@@ -431,7 +431,7 @@ Each public demo folder contains:
 
 - Open your cloned repository in VS Code
 - Open Source Control panel to see the commit history and changes
-- Modify a file (e.g., add a line to `README.md`), then use the Source Control panel to stage, commitm and push your change
+- Modify a file (e.g., add a line to `README.md`), then use the Source Control panel to stage, commit, and push your change
 - Open the terminal in VS Code and run a simple command, e.g.
 ```bash
 echo "Hello, VS Code!"
@@ -483,7 +483,7 @@ echo "Hello, VS Code!"
   ```text
   Create a template README.md for a research project
   ```
-  and see how Codex generates the fie
+  and see how Codex generates the file
 
 ---
 
@@ -499,7 +499,7 @@ echo "Hello, VS Code!"
 
 - `AGENTS.md` is a simple open format for guiding coding agents in a project.
 - Think of it as a README for agents, with instructions on project structure, conventions, and helpful commands.
-- Used by huge amount of open source projects
+- Used by many open source projects
 
 ---
 
@@ -729,12 +729,287 @@ conda env create -f environment.yml
 
 ---
 
+# What Validation Means
+
+Validation is not only "the code runs."
+
+<div class="columns">
+<div class="card">
+
+### Scientific validation
+
+- Are the inputs correct?
+- Are units stated and consistent?
+- Are assumptions explicit?
+- Is the result physically plausible?
+- Does it agree with a known case?
+
+</div>
+<div class="card">
+
+### Software validation
+
+- Does the code handle expected inputs?
+- Are edge cases checked?
+- Can the workflow be rerun?
+- Are outputs saved in predictable locations?
+- Can another person review the result?
+
+</div>
+</div>
+
+---
+
+# Why Testing Matters with Coding Agents
+
+- Agents can produce convincing code that is still wrong
+- Tests turn expectations into executable checks
+- Tests let you safely refactor or extend code later
+- Tests make collaboration easier because failures are specific
+- Validation checks document what you decided to trust
+
+**Rule of thumb:** ask the agent to help write tests, but ask yourself whether the tests check the real scientific claim.
+
+---
+
+# A Practical Testing Ladder
+
+Start simple, then add confidence where the risk is highest.
+
+1. **Smoke check**: can the script run from a clean environment?
+2. **Unit test**: does one function give the expected answer for a small example?
+3. **Regression test**: does a known input still produce the same output?
+4. **Scientific check**: are units, ranges, trends, and limiting cases sensible?
+5. **Reproducibility check**: can the full workflow be rerun from the README?
+
+---
+
+# Minimal Python Test Example
+
+```python
+# tests/test_stats.py
+from src.stats import mean_value
+
+def test_mean_value_for_simple_list():
+    assert mean_value([1, 2, 3]) == 2
+```
+
+Run tests:
+
+```bash
+python -m pytest
+```
+
+- Keep tests small and readable
+- Prefer simple known examples before complex real data
+- Add one test when you fix a bug so it does not return silently
+
+---
+
+# Validation Checklist Before Trusting Outputs
+
+<div class="columns">
+<div class="card">
+
+### Inputs and assumptions
+
+- Input files are the intended ones
+- Units are stated
+- Missing values are handled
+- Random seeds are recorded
+- Important assumptions are written down
+
+</div>
+<div class="card">
+
+### Outputs and workflow
+
+- Expected files are created
+- Figures and tables have source data
+- Results are plausible
+- Environment is documented
+- README rerun steps work
+
+</div>
+</div>
+
+---
+
+# Ask Codex to Help Validate
+
+Useful prompts:
+
+```text
+Read this code and list assumptions, edge cases, and validation checks.
+```
+
+```text
+Add minimal pytest tests for the core calculation. Use simple known inputs.
+```
+
+```text
+Review these outputs for reproducibility risks and missing documentation.
+```
+
+```text
+Create a smoke-test command that verifies the main workflow runs end to end.
+```
+
+---
+
+# Breakout Session: Add a Validation Check
+
+- Choose one demo, exercise, or your own project
+- Identify the most important output it produces
+- Write down one expected property of that output
+- Ask Codex to create a small test or smoke check
+- Run it, inspect the result, and commit the validation change
+
+Example commit message:
+
+```bash
+git commit -m "Add validation check for main output"
+```
+
+---
+
 <!-- _class: topic -->
 
 # Documentation & Project Structure
 
 ## Best practices for organizing your project and documenting it clearly
 
+---
+
+# Project Structure Is Communication
+
+A good structure helps both humans and agents answer:
+
+- Where are the original inputs?
+- Where is the code that produces the outputs?
+- Which files are generated and which are source material?
+- How do I rerun the project from scratch?
+- What should I check before trusting the results?
+
+If the structure is clear, prompts become shorter and agent mistakes become easier to notice.
+
+---
+
+# Recommended Project Shape
+
+```text
+README.md
+AGENTS.md
+environment.yml
+input/
+src/
+tests/
+output/
+docs/
+```
+
+- `input/` - original data, task description, and expected outputs
+- `src/` - reusable code and runnable entry points
+- `tests/` - small tests and smoke checks
+- `output/` - generated figures, tables, reports, or app artifacts
+- `docs/` - notes, methods, troubleshooting, and extra explanations
+
+---
+
+# Keep Inputs and Outputs Separate
+
+<div class="columns">
+<div class="card">
+
+### Keep stable
+
+- original data
+- task statement
+- evaluation criteria
+- references
+- environment files
+
+</div>
+<div class="card">
+
+### Regenerate when possible
+
+- cleaned data
+- figures
+- tables
+- reports
+- app build files
+
+</div>
+</div>
+
+Never silently edit raw inputs. If cleaning is needed, write a script and document the decision.
+
+---
+
+# What a README Should Answer
+
+- What problem does this project solve?
+- What are the inputs and where did they come from?
+- What outputs should be produced?
+- How do I set up the environment?
+- How do I run the workflow?
+- How do I run tests or validation checks?
+- What assumptions, limitations, or known issues should I know?
+
+A README is not decoration. It is the shortest path from clone to understanding.
+
+---
+
+# Documentation Close to the Work
+
+- Put data descriptions in `input/DATA.md`
+- Put task goals in `input/TASK.md`
+- Put expected outputs and evaluation criteria in `input/OUTPUTS.md`
+- Put milestones and checkpoints in `input/MILESTONES.md`
+- Put agent instructions in `AGENTS.md`
+- Put usage instructions in `README.md`
+- Put methods, notes, and decisions in `docs/`
+
+This turns project context into files the agent can read and the team can review.
+
+---
+
+# Project Documentation with Codex
+
+Useful prompts:
+
+```text
+Read this repository and summarize the project structure.
+```
+
+```text
+Create a README section explaining how to rerun the project and run tests.
+```
+
+```text
+Check whether the folder structure separates inputs, code, tests, and outputs.
+```
+
+```text
+Update AGENTS.md with the build, test, and validation commands for this project.
+```
+
+---
+
+# Breakout Session: Improve Project Structure
+
+- Open a demo, exercise, or your own project
+- Check whether it has `README.md`, `input/`, `src/`, `tests/`, and `output/`
+- Add or improve one missing documentation file
+- Ask Codex to review the structure for reproducibility risks
+- Commit the change with a clear message
+
+Example commit message:
+
+```bash
+git commit -m "Document project structure and validation steps"
+```
 
 ---
 
