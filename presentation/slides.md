@@ -318,9 +318,18 @@ cd AI-Coding-Agents-Workshop
 
 ---
 
+# Breakout Session: Git & GitHub Practice
+
+- Clone the workshop repository
+- Create a new repository on GitHub for your work on the exercises
+- Make a small `README.md` file with a description of your project and commit it
+- Push your commit to GitHub
+
+---
+
 <!-- _class: topic -->
 
-# About this repository
+# About the workshop repository
 
 ## Overview of materials for the workshop
 
@@ -401,6 +410,27 @@ Each public demo folder contains:
 - Explore Extensions panel on the left sidebar
 - Open your cloned repository folder in VS Code
 - Explore the Source Control panel to see the commit history and changes
+
+---
+
+# Breakout Session: VS Code Practice
+
+- Open your cloned repository in VS Code
+- Open Source Control panel to see the commit history and changes
+- Modify a file (e.g., add a line to `README.md`), then use the Source Control panel to stage, commitm and push your change
+- Open the terminal in VS Code and run a simple command, e.g.
+```bash
+echo "Hello, VS Code!"
+```
+- Save the workspace for your project to keep your settings and open files organized
+
+---
+
+<!-- _class: topic -->
+
+# Break
+
+## See you in 10 minutes for the next section
 
 ---
 
