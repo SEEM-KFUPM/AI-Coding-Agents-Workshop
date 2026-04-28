@@ -35,6 +35,9 @@ style: |
     place-content: safe center center;
     text-align: center;
   }
+  section.refs {
+    font-size: 22px;
+  }
   h1, h2 { color: var(--accent); }
   h3 { color: var(--accent-soft); }
   code {
@@ -613,7 +616,19 @@ conda env create -f environment.yml
 
 ---
 
+<!-- _class: refs -->
+
 # References
 
+- Sandve et al. (2013), [Ten simple rules for reproducible computational research](https://doi.org/10.1371/journal.pcbi.1003285)
+- [Pro Git book](https://git-scm.com/book/en/v2) and [Git reference documentation](https://git-scm.com/docs)
+- [GitHub Docs: Repositories](https://docs.github.com/en/repositories/creating-and-managing-repositories)
+- [VS Code documentation](https://code.visualstudio.com/docs)
+- [OpenAI Codex documentation](https://developers.openai.com/codex/) and [Codex IDE extension](https://developers.openai.com/codex/ide)
+- [OpenAI Cookbook: Codex prompting guide](https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide)
 - [OpenAI - Getting started with Codex](https://youtu.be/px7XlbYgk7I?si=HQJc3yuno-S9GhvZ)
 - [Finally! A Standard for AI Coding Agents (Agents.md Explained)](https://youtu.be/XDP94mYMCzA?si=f5a0E9nRkAqtBzFi)
+- [AGENTS.md open format](https://agents.md/) and [OpenAI AGENTS.md guide](https://developers.openai.com/codex/guides/agents-md)
+- [Conda documentation: Managing environments](https://docs.conda.io/projects/conda/en/stable/user-guide/tasks/manage-environments.html)
+- [Conda specification: environment.yml](https://conda.org/learn/specifications/exchange/environment-yml)
+- [Markdown Guide: Basic syntax](https://www.markdownguide.org/basic-syntax/)
