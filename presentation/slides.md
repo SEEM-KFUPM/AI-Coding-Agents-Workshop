@@ -547,7 +547,69 @@ I want a nice looking page that explains those concepts.
 
 # Closing Principle
 
-Build your project in a way that another researcher can understand it, rerun it, and improve it later.
+Build your project in a way that another researcher can **understand** it, **rerun** it, and **improve** it later.
+
+---
+
+<!-- _class: topic -->
+
+# Python Environments
+
+## Setting up a reproducible environment for your project
+
+---
+
+# What is a Python Environment?
+
+- A Python environment is a self-contained directory that contains a specific version of Python and a set of installed packages
+- It allows you to manage dependencies and avoid conflicts between different projects.
+- Common tools for managing Python environments include `conda`, `venv`, and `pip`:
+  - `conda` is a popular package and environment management system that works across platforms
+  - `venv` is a built-in module for creating lightweight virtual environments
+  - `pip` is the standard package installer for Python, often used in conjunction with `venv`
+- In this workshop, we will focus on using `conda` for managing Python environments.
+
+---
+
+# Python Environments with `conda`
+
+- `conda` is a popular package and environment management system that works across platforms.
+- Get `conda` from [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) or [miniforge](https://github.com/conda-forge/miniforge) (recommended) and install it
+- To create a new environment:
+```bash
+conda create -n myenv python=3.10
+```
+- To activate the environment:
+```bash
+conda activate myenv
+```
+- To install packages, e.g.:
+```bash
+conda install numpy pandas matplotlib
+```
+
+---
+
+# Environment Files for Reproducibility
+
+- You can export your environment to a file that others can use to recreate the same environment
+- For `conda`, use:
+```bash
+conda env export > environment.yml
+```
+- Others can then create the same environment with:
+```bash
+conda env create -f environment.yml
+```
+- You can create environment files manually or with the help of coding agents by asking them to generate an `environment.yml` based on the packages you have installed or the code you have written
+
+---
+
+# Advantages of Using Python Environments
+
+- **Reproducibility**: ensures that you and others can recreate the same environment with the same dependencies (including specific versions)
+- **Isolation**: prevents conflicts between different projects that may require different versions of packages
+- **Portability**: you can share your environment configuration (e.g., `environment.yml` for `conda`) with others to help them set up the same environment
 
 ---
 
