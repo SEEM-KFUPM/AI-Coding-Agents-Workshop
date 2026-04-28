@@ -570,17 +570,6 @@ Common sections:
 
 ---
 
-# Write Documentation with Codex
-
-Prompt:
-
-```text
-Create a simple HTML page called assets.html that shows how files in this project are related to each other. 
-I want a nice looking page that explains those concepts.
-```
-
----
-
 # Useful Tips
 
 - Use `/` to bring up the command menu and explore available commands for your agent
@@ -961,21 +950,9 @@ A README is not decoration. It is the shortest path from clone to understanding.
 
 ---
 
-# Documentation Close to the Work
-
-- Put data descriptions in `input/DATA.md`
-- Put task goals in `input/TASK.md`
-- Put expected outputs and evaluation criteria in `input/OUTPUTS.md`
-- Put milestones and checkpoints in `input/MILESTONES.md`
-- Put agent instructions in `AGENTS.md`
-- Put usage instructions in `README.md`
-- Put methods, notes, and decisions in `docs/`
-
-This turns project context into files the agent can read and the team can review.
-
----
-
 # Project Documentation with Codex
+
+If you don't like writing documentation, use Codex to help you! 
 
 Useful prompts:
 
@@ -992,17 +969,30 @@ Check whether the folder structure separates inputs, code, tests, and outputs.
 ```
 
 ```text
-Update AGENTS.md with the build, test, and validation commands for this project.
+Create a simple HTML page called assets.html that shows how files in this project are related to each other. 
+I want a nice looking page that explains those concepts.
 ```
 
 ---
 
+# Professional Documentation
+
+- Use [Sphinx](https://www.sphinx-doc.org/), [MkDocs](https://www.mkdocs.org/), or [Jekyll](https://jekyllrb.com/) to create a documentation website from your Markdown files
+- Host the documentation on [GitHub Pages](https://pages.github.com/) or [ReadTheDocs](https://readthedocs.org/) for easy access and sharing
+- Use the documentation to explain not only how to run the project, but also the scientific rationale, methods, and interpretation of results
+- Add examples, visualizations, and troubleshooting tips to make it easier for others to understand and use your project
+- Good Examples:
+  - [PyLops](https://pylops.readthedocs.io/en/stable/)
+  - [ObsPy](https://docs.obspy.org/)
+  - [Mkdocs Material](https://squidfunk.github.io/mkdocs-material/)
+---
+
 # Breakout Session: Improve Project Structure
 
-- Open a demo, exercise, or your own project
-- Check whether it has `README.md`, `input/`, `src/`, `tests/`, and `output/`
+- Copy a demo or exercise folder to your own repository to work on it
+- Revise the project structure and documentation
 - Add or improve one missing documentation file
-- Ask Codex to review the structure for reproducibility risks
+- Ask Codex to review the structure
 - Commit the change with a clear message
 
 Example commit message:
