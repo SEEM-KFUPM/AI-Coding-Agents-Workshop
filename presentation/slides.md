@@ -616,6 +616,17 @@ conda env create -f environment.yml
 
 ---
 
+# Summary
+
+- Coding agents are useful collaborators, but project structure, clear prompts, and human verification still matter
+- Git & GitHub turn project progress into traceable, reviewable, and shareable work
+- VS Code provides the shared workspace for files, terminal commands, source control, and the Codex extension
+- `AGENTS.md` keeps project instructions, commands, conventions, and guardrails available across agent sessions
+- Reproducible Python environments make research projects easier to rerun on another machine
+- A good project has clear inputs, expected outputs, milestones, documentation, and validation checks
+
+---
+
 <!-- _class: refs -->
 
 # References
@@ -632,3 +643,18 @@ conda env create -f environment.yml
 - [Conda documentation: Managing environments](https://docs.conda.io/projects/conda/en/stable/user-guide/tasks/manage-environments.html)
 - [Conda specification: environment.yml](https://conda.org/learn/specifications/exchange/environment-yml)
 - [Markdown Guide: Basic syntax](https://www.markdownguide.org/basic-syntax/)
+
+---
+
+# Next: Demo Projects
+
+## Legacy figure reproduction
+- Reproduce a legacy figure (e.g. a scan) to have more control over how it is generated, and to be able to modify it for future research
+
+## Published paper results reproduction
+
+- Reproduce the results of a published paper to verify them, understand the methods better, and build on top of them in future research
+
+## Geoscience web app
+
+- Build a simple web app for a geoscience use case to learn how to create interactive tools that can be shared with others and used for research or education
