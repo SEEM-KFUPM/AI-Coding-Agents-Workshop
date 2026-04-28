@@ -78,18 +78,19 @@ style: |
 
 # Agenda
 
+**First hour:**
 - **Introduction**: why, what, and how
 - **Git & GitHub**: version control, reproducibility and collaboration
 - **VS Code**: the IDE we will use in the workshop
 --- *Short Break* ---
+
+**Second hour:**
 - **Codex**: the coding agent we will use in the workshop
-- **Python environment**: setting up a reproducible environment for your project
+- **Reproducibility, Validation & Documentation**: environments, testing, documentation, reporting
 - **Demo projects**: use cases
 --- *Long Break* ---
-- **Hands on session**:
-  - take a demo project or design your own project
-  - develop it under guidance of the instructor and assistants
-  - share and review with others (optionally)
+
+Rest of the time: **Hands on session** - take an exercise, a demo project or design your own project
 
 ---
 
@@ -166,7 +167,7 @@ style: |
 
 # Git & GitHub
 
-## Using version control to track progress, ensure reproducibility and share your work
+## Version control to track progress, ensure reproducibility and share your work
 
 ---
 
@@ -322,7 +323,8 @@ cd AI-Coding-Agents-Workshop
 
 - Clone the workshop repository
 - Create a new repository on GitHub for your work on the exercises
-- Make a small `README.md` file with a description of your project and commit it
+- Clone your new repository to your local machine
+- Make a short `README.md` file with a title of your project and commit it
 - Push your commit to GitHub
 
 ---
@@ -341,25 +343,27 @@ cd AI-Coding-Agents-Workshop
 presentation/
 docs/
 demos/
-shared/project-template/
+exercises/
+template/
 ```
 
 - `presentation/` contains this slide deck
-- `docs/` contains setup, workshop, and reproducibility guidance
-- `demos/` contains the three public demo briefs
-- `shared/project-template/` contains a template for creating new project specifications
+- `docs/` contains setup, agents, and reproducibility guidance
+- `demos/` contains the three public demo projects
+- `exercises/` contains exercise projects
+- `template/` contains a template for creating new project specifications
 
 ---
 
 # Guidelines in `docs/`
 
 - `docs/setup/` - machine and account preparation
-- `docs/workshop/` - agenda, prompt hints, troubleshooting
+- `docs/agents/` - prompt hints, validation, troubleshooting
 - `docs/reproducibility/` - Git, environments, project layout
 
 ---
 
-# Demo Tracks
+# Demo Projects in `demos/`
 
 ## 1. Legacy figure reproduction
 ## 2. Published paper results reproduction
@@ -369,7 +373,17 @@ Each demo starts from a clear brief, expected outputs, milestones, and reproduci
 
 ---
 
-# Demo Structure
+# Exercise Projects in `exercises/`
+
+- Smaller, more focused tasks
+- Already have inputs, expected outputs, and milestones defined
+- Practice specific skills with coding agents in a hands-on session
+- Designed to be completed in 15-30 minutes
+- Cover the same range of use cases as the demos
+
+---
+
+# Demo/Exercise Structure
 
 Each public demo folder contains:
 
@@ -389,7 +403,7 @@ Each public demo folder contains:
 
 # Visual Studio Code (VS Code)
 
-## Remarks on the IDE (Integrated Development Environment) we will use in the workshop
+## Remarks on the IDE (Integrated Development Environment) we will use
 
 ---
 
@@ -430,7 +444,7 @@ echo "Hello, VS Code!"
 
 # Break
 
-## See you in 10 minutes for the next section
+## See you in 5 minutes for the next section
 
 ---
 
@@ -438,7 +452,7 @@ echo "Hello, VS Code!"
 
 # Codex
 
-## A coding agent by OpenAI that can help you write, review, and understand code
+## A coding agent by OpenAI to help you write, review, and understand code
 
 ---
 
@@ -451,20 +465,25 @@ echo "Hello, VS Code!"
 
 ---
 
-# Alternative use cases
+# Alternative Coding Agents
 
-- For VS Code: GitHub Copilot, Claude Code, Kilo Code, etc.
+- For VS Code: [GitHub Copilot](https://code.visualstudio.com/docs/copilot/overview), [Claude Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code), [Kilo Code](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code), etc.
 - [Antigravity](https://antigravity.google/) as an alternative to VS Code (same platform), uses Gemini for coding assistance
-- Separate apps: Cursor, Claude Code, Codex App
-- Outside of the scope of this workshop, but worth exploring for your projects and research
+- Separate apps: [Cursor](https://cursor.com/), [Claude Code](https://claude.com/product/claude-code), [Codex App](https://openai.com/codex/)
+- Alternatives are **outside** of the scope of this workshop
+- Worth exploring for your projects and research
 
 ---
 
-# Try Codex in VS Code
+# Breakout Session: Try Codex in VS Code
 
 - Install the [Codex Extension for VS Code by OpenAI](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt)
 - Open VS Code and sign in with your KFUPM credentials to access Codex
-- Try a simple prompt, e.g. `Create a template README.md for a research project` and see how Codex generates the file
+- Try a simple prompt, e.g.
+  ```text
+  Create a template README.md for a research project
+  ```
+  and see how Codex generates the fie
 
 ---
 
@@ -565,7 +584,7 @@ I want a nice looking page that explains those concepts.
 # Useful Tips
 
 - Use `/` to bring up the command menu and explore available commands for your agent
-- You can point the agent to a file with `@<filename>` or folder `@<foldername>` in your prompt
+- You can point the agent to a file with `@<filename>` in your prompt
 - Create comments with `# TODO` in your code to explain the purpose of a function or block you want to do, and ask the agent to write the implementation with "Implement with Codex" menu option
 - Use screenshots as a context inside the prompts
 
@@ -578,9 +597,64 @@ I want a nice looking page that explains those concepts.
 
 ---
 
-# Closing Principle
+# Breakout Session: set up `AGENTS.md` and try some prompts
 
-Build your project in a way that another researcher can **understand** it, **rerun** it, and **improve** it later.
+- Create an `AGENTS.md` file in your project root with instructions for the agent
+- Try some of the prompts we discussed to explore the workshop repository and understand the demo projects
+- Try to use `@<filename>` to point the agent to a specific file and use context
+- Explore the command menu with `/` and try the `/review` command
+
+---
+
+<!-- _class: topic -->
+
+# Research reproducibility
+
+## Best practices for making your research projects reproducible and reusable
+
+---
+
+# General Principles
+
+## Build your project in a way that another researcher can **understand** it, **rerun** it, and **improve** it later.
+
+- Document your project structure, inputs, outputs, and assumptions clearly
+- Document your changes
+- Use version control (Git) to track changes and enable rollback
+- Set up a reproducible environment
+
+## A Good Question to Ask
+
+If I revisit this in three months, will I understand how it works?
+
+---
+
+# Ten Habits for Reproducible Computational Research
+
+<div class="columns">
+<div>
+
+1. Track how each result was produced
+2. Replace manual data edits with scripted steps
+3. Record exact external tool versions
+4. Put custom scripts under version control
+5. Save intermediate outputs in standard formats
+
+</div>
+<div>
+
+6. Record random seeds when randomness is involved
+7. Keep the data behind every plot
+8. Organize outputs from summary to detail
+9. Link claims to the results supporting them
+10. Share scripts, runs, data, and results publicly
+
+</div>
+</div>
+
+Sandve et al. (2013), adapted for project work with AI coding agents.
+
+Sandve, G. K., Nekrutenko, A., Taylor, J., & Hovig, E. (2013). Ten simple rules for reproducible computational research. *PLoS Computational Biology*, 9(10), e1003285. <https://doi.org/10.1371/journal.pcbi.1003285>
 
 ---
 
@@ -643,6 +717,23 @@ conda env create -f environment.yml
 - **Reproducibility**: ensures that you and others can recreate the same environment with the same dependencies (including specific versions)
 - **Isolation**: prevents conflicts between different projects that may require different versions of packages
 - **Portability**: you can share your environment configuration (e.g., `environment.yml` for `conda`) with others to help them set up the same environment
+
+---
+
+<!-- _class: topic -->
+
+# Validation & Testing
+
+## Setting up tests to verify your code works as expected
+
+---
+
+<!-- _class: topic -->
+
+# Documentation & Project Structure
+
+## Best practices for organizing your project and documenting it clearly
+
 
 ---
 
