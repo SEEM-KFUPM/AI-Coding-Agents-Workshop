@@ -6,7 +6,7 @@
 - Source code separated into UI and reusable logic.
 - A README with installation, launch command, app usage, assumptions, and known
   limitations.
-- `pyproject.toml` and either `environment.yml` or `requirements.txt`.
+- `pyproject.toml` and `environment.yml`.
 - Tests for receiver parsing, geometry validation, toy mode selection, solver
   adapter behavior, and the app callback.
 - A default example run using the model and geometry in `DATA.md`.
@@ -23,7 +23,7 @@ One acceptable structure is:
 .
 |-- README.md
 |-- pyproject.toml
-|-- requirements.txt
+|-- environment.yml
 |-- app.py
 |-- src/
 |   `-- vti_raytrace_app/

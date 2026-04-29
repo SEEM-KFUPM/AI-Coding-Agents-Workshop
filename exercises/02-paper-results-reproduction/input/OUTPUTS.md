@@ -6,7 +6,7 @@
 - Source code organized in `src/vti_raytrace/`.
 - A project README with installation, quick start, assumptions, and known
   limitations.
-- `pyproject.toml` and either `environment.yml` or `requirements.txt`.
+- `pyproject.toml` and `environment.yml`.
 - Tests for model handling, toy VTI equations, solver behavior, and analytical
   reference cases.
 - An example script that runs the synthetic model from `DATA.md`.
