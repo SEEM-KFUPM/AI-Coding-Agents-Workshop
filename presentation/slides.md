@@ -314,8 +314,8 @@ git status
 git clone https://github.com/SEEM-KFUPM/AI-Coding-Agents-Workshop.git
 cd AI-Coding-Agents-Workshop
 ```
-- Create your own repository for your version of demo projects and clone it
-- You will use your repository to track your work on the demos, and you can share it with others for feedback and collaboration
+- Create your own repository for your version of exercise/demo projects and clone it
+- You will use your repository to track your work on the exercises/demos, and you can share it with others for feedback and collaboration
 
 ---
 
@@ -349,7 +349,7 @@ template/
 
 - `presentation/` contains this slide deck
 - `docs/` contains setup, agents, and reproducibility guidance
-- `demos/` contains the three public demo projects
+- `demos/` contains public demo projects
 - `exercises/` contains exercise projects
 - `template/` contains a template for creating new project specifications
 
@@ -367,7 +367,6 @@ template/
 
 ## 1. Legacy figure reproduction
 ## 2. Published paper results reproduction
-## 3. Geoscience web app
 
 Each demo starts from a clear brief, expected outputs, milestones, and reproducibility notes.
 
@@ -379,7 +378,6 @@ Each demo starts from a clear brief, expected outputs, milestones, and reproduci
 - Already have inputs, expected outputs, and milestones defined
 - Practice specific skills with coding agents in a hands-on session
 - Designed to be completed in 15-30 minutes
-- Cover the same range of use cases as the demos
 
 ---
 
@@ -1041,7 +1039,3 @@ git commit -m "Document project structure and validation steps"
 ## Published paper results reproduction
 
 - Reproduce the results of a published paper to verify them, understand the methods better, and build on top of them in future research
-
-## Geoscience web app
-
-- Build a simple web app for a geoscience use case to learn how to create interactive tools that can be shared with others and used for research or education
