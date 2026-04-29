@@ -2,7 +2,7 @@
 
 Prepare the following before the workshop:
 
-- [Python](https://www.python.org/downloads/)
+- [Python](https://www.python.org/downloads/), better to use [Miniforge](https://github.com/conda-forge/miniforge) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) for environment management
 - [Git](https://git-scm.com/downloads)
 - [A GitHub account](https://github.com/signup)
 - [VS Code](https://code.visualstudio.com/download)
@@ -14,8 +14,3 @@ Prepare the following before the workshop:
 - `git --version` from command line/terminal
 - Sign in to GitHub and clone the repository to your local machine
 - Open VS Code and confirm the terminal works
-
-## Nice to Have
-
-- A working virtual environment tool such as `conda` or `venv`
-- A small research idea you may want to map into this structure later

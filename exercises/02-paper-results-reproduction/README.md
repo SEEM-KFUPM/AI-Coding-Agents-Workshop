@@ -1,11 +1,26 @@
-# Demo 2: Paper Results Reproduction
+# Exercise 2: Paper-to-Package Mini Rebuild
 
-This demo is the research-style extension track.
+This exercise is the second guided exercise for the workshop.
 
 ## Purpose
 
-Participants move from reading a published method description toward reproducing one or two concrete outputs in a controlled project structure.
+Participants turn a published geoscience method into a tiny, tested Python
+package. The aim is to practice extracting a minimal software specification
+from a paper, not to reproduce the full paper.
 
-## Current Status
+## What Participants Practice
 
-The candidate paper has not been finalized yet. This public folder captures the selection criteria and expected workflow.
+- reading a method paper as a software specification
+- narrowing an ambitious paper to a workshop-sized implementation
+- creating a small package scaffold with tests and examples
+- documenting scientific assumptions and simplifications
+- using Git checkpoints while growing a research-code prototype
+
+## Starting Point
+
+Use the files in `input/`:
+
+- `TASK.md` defines the simplified package-building task
+- `DATA.md` gives the paper reference, synthetic model, and toy equations
+- `OUTPUTS.md` defines the expected project structure and deliverables
+- `MILESTONES.md` suggests an implementation sequence and Git checkpoints
