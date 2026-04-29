@@ -17,4 +17,4 @@ The slide deck is written in Markdown using Marp.
 
 - Keep the presentation aligned with the public repository paths
 - Avoid event-specific dates in the base deck
-- Keep screenshots and diagrams in `assets/`
+- Keep figures, screenshots and diagrams in `assets/`
