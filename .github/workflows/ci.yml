@@ -20,30 +20,35 @@ jobs:
             "presentation/slides.md"
             "presentation/README.md"
             "docs/setup/local-setup.md"
-            "docs/workshop/agenda.md"
+            "docs/agents/prompt-cheatsheet.md"
             "docs/reproducibility/git-workflow.md"
+            "demos/README.md"
+            "demos/demo1.pdf"
+            "demos/demo2.pdf"
             "exercises/01-legacy-figure-reproduction/README.md"
             "exercises/02-paper-results-reproduction/README.md"
             "exercises/03-geoscience-webapp/README.md"
+            "template/README.md"
           )
           for path in "${required[@]}"; do
             test -f "$path"
           done
 
-      - name: Check demo file contract
+      - name: Check projects file contract
         shell: bash
         run: |
           set -euo pipefail
-          demos=(
+          projects=(
             "exercises/01-legacy-figure-reproduction"
             "exercises/02-paper-results-reproduction"
             "exercises/03-geoscience-webapp"
+            "template"
           )
-          for demo in "${demos[@]}"; do
-            test -f "$demo/README.md"
-            test -f "$demo/input/TASK.md"
-            test -f "$demo/input/DATA.md"
-            test -f "$demo/input/OUTPUTS.md"
-            test -f "$demo/input/MILESTONES.md"
-            test -f "$demo/prompts.md"
+          for project in "${projects[@]}"; do
+            test -f "$project/README.md"
+            test -f "$project/input/TASK.md"
+            test -f "$project/input/DATA.md"
+            test -f "$project/input/OUTPUTS.md"
+            test -f "$project/input/MILESTONES.md"
+            test -f "$project/prompts.md"
           done
