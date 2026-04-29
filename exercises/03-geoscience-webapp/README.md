@@ -1,11 +1,28 @@
-# Demo 3: Geoscience Web App
+# Exercise 3: Interactive VTI Ray-Tracing Web App
 
-This demo explores how coding agents can help build a small, usable interface around a geoscience workflow.
+This exercise is the third guided exercise for the workshop.
 
 ## Purpose
 
-Participants translate a simple analysis or ML idea into a lightweight app with clear inputs, outputs, and validation expectations.
+Participants turn the VTI ray-tracing mini-package from Exercise 2 into a
+small Gradio web app. The app should let a user edit source and receiver
+geometry, choose a wave mode, and plot 2-D ray paths through a layered VTI
+model in the spirit of the Figure 1 reproduction task from Exercise 1.
 
-## Current Status
+## What Participants Practice
 
-The exact application topic is still open. The public repo defines the app concept, expected user flow, and output contract.
+- wrapping scientific code in a lightweight interactive interface
+- separating Gradio UI code from reusable ray-tracing logic
+- validating user-provided geometry before running a solver
+- presenting ray paths and travel-time tables clearly
+- documenting where the app is paper-inspired and where it is simplified
+
+## Starting Point
+
+Use the files in `input/`:
+
+- `TASK.md` defines the Gradio app task and success criteria
+- `DATA.md` gives the synthetic layered VTI model, default geometry, and toy
+  wave-mode parameters
+- `OUTPUTS.md` defines the expected app structure and deliverables
+- `MILESTONES.md` suggests an implementation sequence and Git checkpoints
