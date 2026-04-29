@@ -22,9 +22,9 @@ jobs:
             "docs/setup/local-setup.md"
             "docs/workshop/agenda.md"
             "docs/reproducibility/git-workflow.md"
-            "demos/01-legacy-figure-reproduction/README.md"
-            "demos/02-paper-results-reproduction/README.md"
-            "demos/03-geoscience-webapp/README.md"
+            "exercises/01-legacy-figure-reproduction/README.md"
+            "exercises/02-paper-results-reproduction/README.md"
+            "exercises/03-geoscience-webapp/README.md"
           )
           for path in "${required[@]}"; do
             test -f "$path"
@@ -35,15 +35,15 @@ jobs:
         run: |
           set -euo pipefail
           demos=(
-            "demos/01-legacy-figure-reproduction"
-            "demos/02-paper-results-reproduction"
-            "demos/03-geoscience-webapp"
+            "exercises/01-legacy-figure-reproduction"
+            "exercises/02-paper-results-reproduction"
+            "exercises/03-geoscience-webapp"
           )
           for demo in "${demos[@]}"; do
             test -f "$demo/README.md"
-            test -f "$demo/TASK.md"
-            test -f "$demo/DATA.md"
-            test -f "$demo/OUTPUTS.md"
-            test -f "$demo/MILESTONES.md"
+            test -f "$demo/input/TASK.md"
+            test -f "$demo/input/DATA.md"
+            test -f "$demo/input/OUTPUTS.md"
+            test -f "$demo/input/MILESTONES.md"
             test -f "$demo/prompts.md"
           done
